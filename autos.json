@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "brand": "Toyota Land Cruiser Prado",
+        "age": "2008",
+        "cost": "1699000",
+        "mileage": "272 тыс. км",
+        "transmission": "АКПП",
+        "engine_power": "249 л.с.",
+        "engines_type": "",
+        "drive_unit": "бензин",
+        "is_sell": "Продаётся"
+    },
+    {
+        "id": 2,
+        "brand": "Toyota RAV4",
+        "age": "2007",
+        "cost": "1075000",
+        "mileage": "менее 1 тыс. км",
+        "transmission": "АКПП",
+        "engine_power": "152 л.с.",
+        "engines_type": "",
+        "drive_unit": "бензин",
+        "is_sell": "Продаётся"
+    }
+]
