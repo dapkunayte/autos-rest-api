@@ -1,8 +1,8 @@
-from fastapi import FastAPI, HTTPException, Request, Depends
-import json
+from fastapi import FastAPI, Depends
 import crud, models, pydantic_models
 from database import SessionLocal, engine
 from sqlalchemy.orm import Session
+import uvicorn
 
 
 models.Base.metadata.create_all(bind=engine)
@@ -44,3 +44,6 @@ def delete_auto(auto_id: int, db: Session = Depends(get_db)):
 @app.put("/autos/{auto_id}", response_model=pydantic_models.AutoBase)
 def update(auto_id: int, auto: pydantic_models.AutoBase, db: Session = Depends(get_db)):
     return crud.update_auto(db=db, auto_id=auto_id, auto=auto)
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
