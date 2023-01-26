@@ -14,3 +14,7 @@ class AutoBase(BaseModel):
 
 class Auto(AutoBase):
     id: int
+
+
+class AutosCompare(BaseModel):
+    pass

@@ -15,7 +15,7 @@ def get_autos(db: Session, skip: int = 0, limit: int = 100):
     db_autos = db.query(models.Auto).offset(skip).limit(limit).all()
     if db_autos is None or db_autos == [ ]:
         raise HTTPException(status_code=404, detail="Item not found")
-    return db.query(models.Auto).offset(skip).limit(limit).all()
+    return db_autos
 
 
 def create_auto(db: Session, auto: pydantic_models.AutoBase):
